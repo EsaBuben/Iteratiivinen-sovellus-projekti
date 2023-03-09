@@ -32,3 +32,46 @@ body {
     top: 100px;
     margin: 0 auto;
 }
+
+.titleOfResult {
+	background-color: #5B5757;
+	height: 40px;
+	width: 600px;
+	position: relative;
+    top: 100px;
+    margin: 0 auto;
+	}
+.one {
+	color: yellow;
+	position: relative;
+	top: 10px;
+	left: 16px;
+}
+.two {
+	color: DeepPink;
+    position: absolute;
+	top: 10px;
+	left:250px;
+}
+.aResult {
+	color: white;
+	background-color: DimGrey;
+	height: 40px;
+    width: 600px;
+	
+	
+}
+.bResult {
+	color: white;
+
+	background-color: DarkGrey;
+	height: 40px;
+    width: 600px;
+}
+.scrolli {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height:117px;
+	color: white;
+	background-color: black;
