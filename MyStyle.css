@@ -30,6 +30,7 @@ body {
 #form{
     position: relative;
     top: 100px;
+	left: 450px;
     margin: 0 auto;
 }
 
@@ -38,7 +39,8 @@ body {
 	height: 40px;
 	width: 600px;
 	position: relative;
-    top: 100px;
+    top: 230px;
+	right: 360px;
     margin: 0 auto;
 	}
 .one {
