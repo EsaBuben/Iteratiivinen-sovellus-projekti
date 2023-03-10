@@ -30,7 +30,7 @@ body {
 #form{
     position: relative;
     top: 100px;
-	left: 390px;
+
     margin: 0 auto;
 }
 
@@ -38,10 +38,10 @@ body {
 	background-color: #5B5757;
 	height: 40px;
 	width: 600px;
-	position: relative;
-    top: 230px;
-	right: 360px;
-    margin: 0 auto;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	}
 .one {
 	color: yellow;
