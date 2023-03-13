@@ -36,18 +36,26 @@ body {
 
 
 .table-container {
-    max-height: 200px;
-    overflow-y: scroll;
+    overflow-y: auto;
     position: absolute;
-    top:40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    left: 32%;
+	top:30%;
+	max-height:400px;
+	width:445px;
+	display:block;
+	border-spacing:0;
+	
+	
+
 }
 
 table {
+	white-space: nowrap;
+	position:fixed;
     border-collapse: collapse;
     width: 60%;
     text-align: left;
+	max-heigth:150px;
 }
 
 thead th {
