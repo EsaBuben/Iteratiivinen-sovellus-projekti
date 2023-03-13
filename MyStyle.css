@@ -34,64 +34,40 @@ body {
     margin: 0 auto;
 }
 
-table {
-	widht: 60%;
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-}
 
-
-
-
-
-
-
-
-.titleOfResult {
-	background-color: #38383a;
-	height: 40px;
-	width: 600px;
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	}
-.one {
-	color: yellow;
-	position: relative;
-	top: 10px;
-	left: 16px;
-	font-size: 18px;
-}
-.two {
-	color: #ff4cb5;
+.table-container {
+    max-height: 200px;
+    overflow-y: scroll;
     position: absolute;
-	top: 10px;
-	left:250px;
-	font-size: 18px;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 
+table {
+    border-collapse: collapse;
+    width: 60%;
+    text-align: left;
 }
-.aResult {
-	color: white;
-	background-color: #59595b;
-	height: 40px;
-    width: 600px;
-	
-	
-}
-.bResult {
-	color: white;
 
-	background-color: #7e7e7f;
-	height: 40px;
-    width: 600px;
+thead th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    
 }
-.scrolli {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	height:120px;
-	color: white;
-	background-color: black;
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    
+}
+
