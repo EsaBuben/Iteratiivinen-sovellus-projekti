@@ -41,9 +41,10 @@ body {
     left: 32%;
 	top:30%;
 	max-height:400px;
-	width:445px;
+	width:450px;
 	display:block;
 	border-spacing:0;
+	background-color:darkgrey;
 	
 	
 
@@ -53,15 +54,17 @@ table {
 	white-space: nowrap;
 	position:fixed;
     border-collapse: collapse;
-    width: 60%;
+    width: 100%;
     text-align: left;
 	max-heigth:150px;
+	border:3px solid;
 }
 
 thead th {
     background-color: #333;
     color: #fff;
     font-weight: bold;
+	border:solid;
     
 }
 
@@ -74,7 +77,7 @@ tbody tr:hover {
 }
 
 tbody td {
-    border: 1px solid #ddd;
+    border: 3px solid black;
     padding: 8px;
     
 }
