@@ -50,7 +50,7 @@ table {
 
 
 .titleOfResult {
-	background-color: #5B5757;
+	background-color: #38383a;
 	height: 40px;
 	width: 600px;
 	position: absolute;
@@ -66,7 +66,7 @@ table {
 	font-size: 18px;
 }
 .two {
-	color: DeepPink;
+	color: #ff4cb5;
     position: absolute;
 	top: 10px;
 	left:250px;
@@ -75,7 +75,7 @@ table {
 }
 .aResult {
 	color: white;
-	background-color: DimGrey;
+	background-color: #59595b;
 	height: 40px;
     width: 600px;
 	
@@ -84,7 +84,7 @@ table {
 .bResult {
 	color: white;
 
-	background-color: DarkGrey;
+	background-color: #7e7e7f;
 	height: 40px;
     width: 600px;
 }
