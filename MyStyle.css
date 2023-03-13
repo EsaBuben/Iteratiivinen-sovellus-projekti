@@ -38,7 +38,7 @@ body {
 .table-container {
     overflow-y: auto;
     position: absolute;
-    left: 32%;
+    left: 34%;
 	top:30%;
 	max-height:400px;
 	width:450px;
