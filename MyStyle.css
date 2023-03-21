@@ -45,6 +45,7 @@ body {
 	display:block;
 	border-spacing:0;
 	border: 1px solid black;
+	border-radius: 10px;
 	background-color:#4a4a4e;
 	color: white
 	
