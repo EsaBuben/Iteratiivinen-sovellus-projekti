@@ -107,18 +107,15 @@
                     }
 
                 }
+            }   else if (kaupunki == "Espoo" && toimiala == "Elintarvike")
+            {
+                
+            string[] elintarvikkeet = { "3039230", "21391312", "0138182812", "230820823", "Elintarviker yritys", "Elintarvikez yritys", "Elintarvikes yritys", "Elintarvikek yritys", "40182919", "00440020", "102902110039", "1212991282", "hieno@example.com", "kiva@example.com", "omena@example.com", "miu@example.com" };
+            System.Console.WriteLine(elintarvikkeet[0] + elintarvikkeet[4] + elintarvikkeet[8] + elintarvikkeet[12]);
+            System.Console.WriteLine(elintarvikkeet[1] + elintarvikkeet[5] + elintarvikkeet[9]  + elintarvikkeet[13]);
+            System.Console.WriteLine(elintarvikkeet[2] + elintarvikkeet[6] + elintarvikkeet[10] + elintarvikkeet[14]);
+            System.Console.WriteLine(elintarvikkeet[3] + elintarvikkeet[7] + elintarvikkeet[11] + elintarvikkeet[15]);
             }
-
-
-
-
-
-
-
-
-
-
-
             %>
     </table>
 
