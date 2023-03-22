@@ -2,6 +2,48 @@
 
 <!DOCTYPE html>
 
+<% double result;
+    string toimiala;
+    string kaupunki;
+
+
+    if(Request.Form.Count == 0)
+    {
+        result = 0;
+    }
+    else
+        switch (Request.Form["search"])
+        {
+            case "Helsinki":
+                kaupunki = "Helsinki";
+                break;
+            case "Espoo":
+                kaupunki = "Espoo";
+                break;
+            case "Lahti":
+                kaupunki = "Lahti";
+                break;
+
+
+        }
+    switch (Request.Form["search1"])
+    {
+        case "Kuljetus":
+            toimiala = "Kuljetus";
+            break;
+        case "Ravintola":
+            toimiala = "Ravintola";
+            break;
+        case "Elintarvike":
+            toimiala = "Elintarvike";
+            break;
+    }
+
+
+    %>
+
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -13,10 +55,12 @@
 
 
 
-    <form id="form">
-        <input type="search" id="Toimiala" name="q" placeholder="Industry..."/>
-        <input type="search" id="Kunta" name="q" placeholder="Municipality..."/>
+    <form id="form" runat="server" method="post" action="WebForm1.aspx">
+
+        <input type="search" id="Toimiala" name="search" placeholder="Industry..."/>
+        <input type="search" id="Kunta" name="search2" placeholder="Municipality..."/>
         <button class="firstButton">Search</button>
+
     </form>
 
 
