@@ -40,7 +40,9 @@
     }
 
 
-    %>
+
+
+%>
 
 
 
@@ -73,6 +75,18 @@
             <th>Email</th>
         </tr>
         <%
+            string[] Ravintola_yritys = { "3289701-6", "Abdulin Pizza Oy", "04568342", "Hyväpizza@abdul.fi"};
+            
+
+
+
+
+
+
+
+
+
+
 
             %>
     </table>
