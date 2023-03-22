@@ -105,23 +105,25 @@
                         }
                         else if (kaupunki == "Tampere" && toimiala=="Majoitus")
                         {indeksi=0;
-                        laskuri=0;
-                        string[] majoitus = { "1139352-4", "1139353-4", "1139354-4", "1139352-5", "Ainon Tupa", "Emman Majoitus", "Maatila majoitus", "Aitta majoitus","030907340", "030907340",
-                        "030907340", "030907340", "info(at)yritys.fi", "info(at)yritys.fi","info(at)yritys.fi","info(at)yritys.fi" };
-                              
-        
-                    }
+                            laskuri=0;
+                            string[] majoitus = { "1139352-4", "1139353-4", "1139354-4", "1139352-5", "Ainon Tupa", "Emman Majoitus", "Maatila majoitus", "Aitta majoitus","030907340", "030907340",
+                        "030907340", "030907340", "info(at)yritys.fi", "info(at)yritys.fi","info(at)yritys.fi","info(at)yritys.fi" }
 
-                }
-            }   else if (kaupunki == "Espoo" && toimiala == "Elintarvike")
-            {
-                
-            string[] elintarvikkeet = { "3039230", "21391312", "0138182812", "230820823", "Elintarviker yritys", "Elintarvikez yritys", "Elintarvikes yritys", "Elintarvikek yritys", "40182919", "00440020", "102902110039", "1212991282", "hieno@example.com", "kiva@example.com", "omena@example.com", "miu@example.com" };
-            System.Console.WriteLine(elintarvikkeet[0] + elintarvikkeet[4] + elintarvikkeet[8] + elintarvikkeet[12]);
-            System.Console.WriteLine(elintarvikkeet[1] + elintarvikkeet[5] + elintarvikkeet[9]  + elintarvikkeet[13]);
-            System.Console.WriteLine(elintarvikkeet[2] + elintarvikkeet[6] + elintarvikkeet[10] + elintarvikkeet[14]);
-            System.Console.WriteLine(elintarvikkeet[3] + elintarvikkeet[7] + elintarvikkeet[11] + elintarvikkeet[15]);
-            }
+
+                        else if (kaupunki == "Espoo" && toimiala == "Elintarvike")
+                            {
+                                indeksi = 0;
+                                laskuri = 0;
+                                string[] elintarvikkeet = { "3039230", "21391312", "0138182812", "230820823", "Elintarviker yritys", "Elintarvikez yritys", "Elintarvikes yritys", "Elintarvikek yritys", "40182919", "00440020", "102902110039", "1212991282", "hieno@example.com", "kiva@example.com", "omena@example.com", "miu@example.com" };
+                                System.Console.WriteLine(elintarvikkeet[0] + elintarvikkeet[4] + elintarvikkeet[8] + elintarvikkeet[12]);
+                                System.Console.WriteLine(elintarvikkeet[1] + elintarvikkeet[5] + elintarvikkeet[9]  + elintarvikkeet[13]);
+                                System.Console.WriteLine(elintarvikkeet[2] + elintarvikkeet[6] + elintarvikkeet[10] + elintarvikkeet[14]);
+                                System.Console.WriteLine(elintarvikkeet[3] + elintarvikkeet[7] + elintarvikkeet[11] + elintarvikkeet[15]);
+
+                            }
+
+                        }
+                    }
             %>
     </table>
 
