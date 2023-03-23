@@ -114,38 +114,26 @@
 
                     }
                 }
-            }   else if (kaupunki == "Tampere" && toimiala == "Majoitus")
-            {
-                   
-
-                string[] yTampere = { "1139352-4", "Ainon Tupa", "030907340", "info(at)yritys.fi"};
-          
-            
-  
-
-                { Response.Write("<td>" + yTampere[0] + yTampere[1] + yTampere[2] + yTampere[3] + "</td>");
-                    
-                }
-
+            }
             else if (kaupunki == "Tampere" && toimiala == "Majoitus")
             {
 
-                indeksi = 0;
-                string[] yTampere = { "139352-4", "Ainon Tupa", "030907340", "info@yritys.fi"};
-                Response.Write("<tr><td>" + yTampere[0] + "</td><td>" + yTampere[1]+ "</td><td>" + yTampere[2]+ "</td><td>" + yTampere[3]+"</td></tr>");
-                  
+                string[] yTampere = { "139352-4", "Ainon Tupa", "030907340", "info@yritys.fi" , "139352-5", "Ainon Tupaz", "0309073401", "info@yritys.fii"   };
+                Response.Write("<tr><td>" + yTampere[0] + "</td><td>" + yTampere[1] + "</td><td>" + yTampere[2] + "</td><td>" + yTampere[3] + "</td></tr>");
+                Response.Write("<tr><td>" + yTampere[4] + "</td><td>" + yTampere[5] + "</td><td>" + yTampere[6] + "</td><td>" + yTampere[7] + "</td></tr>");
+
 
             }
 
-            
+
             else if (kaupunki == "Espoo" && toimiala == "Elintarvike")
             {
                 indeksi = 0;
                 string[] elintarvikkeet = { "3039230", "21391312", "0138182812", "230820823", "Elintarviker yritys", "Elintarvikez yritys", "Elintarvikes yritys", "Elintarvikek yritys", "40182919", "00440020", "102902110039", "1212991282", "hieno@example.com", "kiva@example.com", "omena@example.com", "miu@example.com" };
-                Response.Write("<tr><td>"+elintarvikkeet[0]+"</td><td>" + elintarvikkeet[4]+"</td><td>" + elintarvikkeet[8]+"</td><td>" + elintarvikkeet[12]+"</td></tr>");
-                Response.Write("<tr><td>" +elintarvikkeet[1]+"</td><td>" + elintarvikkeet[5]+"</td><td>" + elintarvikkeet[9]+"</td><td>" + elintarvikkeet[13]+"</td></tr>");
-                Response.Write("<tr><td>" +elintarvikkeet[2] + "</td><td>" + elintarvikkeet[6] + "</td><td>"  + elintarvikkeet[10] + "</td><td>" + elintarvikkeet[14] + "</td></tr>");
-                Response.Write("<tr><td>" +elintarvikkeet[3] + "</td><td>" + elintarvikkeet[7] + "</td><td>"  + elintarvikkeet[11] + "</td><td>" + elintarvikkeet[15] + "</td></tr>");
+                Response.Write("<tr><td>" + elintarvikkeet[0] + "</td><td>" + elintarvikkeet[4] + "</td><td>" + elintarvikkeet[8] + "</td><td>" + elintarvikkeet[12] + "</td></tr>");
+                Response.Write("<tr><td>" + elintarvikkeet[1] + "</td><td>" + elintarvikkeet[5] + "</td><td>" + elintarvikkeet[9] + "</td><td>" + elintarvikkeet[13] + "</td></tr>");
+                Response.Write("<tr><td>" + elintarvikkeet[2] + "</td><td>" + elintarvikkeet[6] + "</td><td>" + elintarvikkeet[10] + "</td><td>" + elintarvikkeet[14] + "</td></tr>");
+                Response.Write("<tr><td>" + elintarvikkeet[3] + "</td><td>" + elintarvikkeet[7] + "</td><td>" + elintarvikkeet[11] + "</td><td>" + elintarvikkeet[15] + "</td></tr>");
 
             }
             %>
