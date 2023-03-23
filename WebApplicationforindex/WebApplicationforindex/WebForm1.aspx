@@ -61,8 +61,8 @@
 
     <form id="form" runat="server" method="post" action="WebForm1.aspx">
 
-        <input type="text" value ="<%=Convert.ToString(Request.Form["search1"])%>" id="Toimiala" name="search1" placeholder="Industry"/>
-        <input type="text" value ="<%=Convert.ToString(Request.Form["search2"])%>" id="Kunta" name="search2" placeholder="Municipality"/>
+        <input type="text" value ="<%=Convert.ToString(Request.Form["search1"])%>" id="Toimiala" name="search1" placeholder="Municipality"/>
+        <input type="text" value ="<%=Convert.ToString(Request.Form["search2"])%>" id="Kunta" name="search2" placeholder="Industry"/>
         <button class="firstButton">Search</button>
 
     </form>
@@ -136,6 +136,31 @@
                 Response.Write("<tr><td>" + elintarvikkeet[3] + "</td><td>" + elintarvikkeet[7] + "</td><td>" + elintarvikkeet[11] + "</td><td>" + elintarvikkeet[15] + "</td></tr>");
 
             }
+
+            else if(kaupunki == "Lahti" && toimiala== "Ravintola")
+            {
+                
+                string[,] rowData = { { "8-3463423", "Abdulin Pizza Oy", "457366343", "hyväpizza@abdul.fi" }, { "9-2435345", "Jonin pizza oy", "3474457457", "JoninPaska_izza@äläsyö.fi" }, { "8-3463423", "Kamelin Pizza Oy", "457366343", "hyväpizza@kameli.fi" }, { "9-2435345", "Vuohen pizza oy", "3474457457", "VuohenPaska_pizza@äläsyö.fi" },{ "9-2435345", "Vuohen pizza oy", "3474457457", "VuohenPaska_pizza@äläsyö.fi" },{ "9-2435345", "Vuohen pizza oy", "3474457457", "VuohenPaska_pizza@äläsyö.fi" },{ "8-3463423", "Abdulin Pizza Oy", "457366343", "hyväpizza@abdul.fi" },{ "8-3463423", "Abdulin Pizza Oy", "457366343", "hyväpizza@abdul.fi" },{ "8-3463423", "Abdulin Pizza Oy", "457366343", "hyväpizza@abdul.fi" },{ "8-3463423", "Abdulin Pizza Oy", "457366343", "hyväpizza@abdul.fi" },{ "8-3463423", "Abdulin Pizza Oy", "457366343", "hyväpizza@abdul.fi" },{ "8-3463423", "Abdulin Pizza Oy", "457366343", "hyväpizza@abdul.fi" } };
+
+            int rowCount = rowData.GetLength(0); // number of rows
+            int columnCount = rowData.GetLength(1); // number of columns
+
+            string htmlTableBody = "<tbody>";
+            for (int i = 0; i < rowCount; i++)
+            {
+                htmlTableBody += "<tr>";
+                for (int j = 0; j < columnCount; j++)
+                {
+                    htmlTableBody += "<td>" + rowData[i, j] + "</td>";
+                }
+                htmlTableBody += "</tr>";
+            }
+            htmlTableBody += "</tbody>";
+
+                Response.Write(htmlTableBody);
+               
+            }
+
             %>
     </table>
 
