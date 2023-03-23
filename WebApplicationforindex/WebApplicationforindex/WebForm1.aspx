@@ -136,8 +136,8 @@
                 string[] elintarvikkeet = { "3039230", "21391312", "0138182812", "230820823", "Elintarviker yritys", "Elintarvikez yritys", "Elintarvikes yritys", "Elintarvikek yritys", "40182919", "00440020", "102902110039", "1212991282", "hieno@example.com", "kiva@example.com", "omena@example.com", "miu@example.com" };
                 Response.Write("<tr><td>"+elintarvikkeet[0]+"</td><td>" + elintarvikkeet[4]+"</td><td>" + elintarvikkeet[8]+"</td><td>" + elintarvikkeet[12]+"</td></tr>");
                 Response.Write("<tr><td>" +elintarvikkeet[1]+"</td><td>" + elintarvikkeet[5]+"</td><td>" + elintarvikkeet[9]+"</td><td>" + elintarvikkeet[13]+"</td></tr>");
-                Response.Write(elintarvikkeet[2] + elintarvikkeet[6] + elintarvikkeet[10] + elintarvikkeet[14]);
-                Response.Write(elintarvikkeet[3] + elintarvikkeet[7] + elintarvikkeet[11] + elintarvikkeet[15]);
+                Response.Write("<tr><td>" +elintarvikkeet[2] + "</td><td>" + elintarvikkeet[6] + "</td><td>"  + elintarvikkeet[10] + "</td><td>" + elintarvikkeet[14] + "</td></tr>");
+                Response.Write("<tr><td>" +elintarvikkeet[3] + "</td><td>" + elintarvikkeet[7] + "</td><td>"  + elintarvikkeet[11] + "</td><td>" + elintarvikkeet[15] + "</td></tr>");
 
             }
             %>
