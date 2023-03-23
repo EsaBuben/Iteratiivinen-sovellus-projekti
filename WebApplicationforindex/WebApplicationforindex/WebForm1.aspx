@@ -127,9 +127,17 @@
                     
                 }
 
+            else if (kaupunki == "Tampere" && toimiala == "Majoitus")
+            {
 
+                indeksi = 0;
+                string[] yTampere = { "139352-4", "Ainon Tupa", "030907340", "info@yritys.fi"};
+                Response.Write("<tr><td>" + yTampere[0] + "</td><td>" + yTampere[1]+ "</td><td>" + yTampere[2]+ "</td><td>" + yTampere[3]+"</td></tr>");
+                  
 
             }
+
+            
             else if (kaupunki == "Espoo" && toimiala == "Elintarvike")
             {
                 indeksi = 0;
