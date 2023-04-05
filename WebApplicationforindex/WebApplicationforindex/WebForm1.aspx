@@ -40,8 +40,12 @@
         case "Majoitus":
             toimiala = "Majoitus";
             break;
-            
+
     }*/
+
+
+    string kaupunki = Request.Form["search1"];
+    string toimiala = Request.Form["seach2"];
 
 
 
@@ -60,7 +64,7 @@
 <body>
 
  <% 
-        WebRequest freeDataRequest = WebRequest.Create(@"https://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=100&resultsFrom=0&registeredOffice=Helsinki&businessLine=Teollisuus&companyRegistrationFrom=2014-02-28&companyRegistrationTo=2023-01-31");
+        WebRequest freeDataRequest = WebRequest.Create(@"https://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=100&resultsFrom=0&registeredOffice=" + kaupunki + "&businessLine="+ toimiala +"&companyRegistrationFrom=2014-02-28&companyRegistrationTo=2023-01-31");
         WebResponse freeDataResponse = freeDataRequest.GetResponse();
 
         Stream dataStream = freeDataResponse.GetResponseStream();
