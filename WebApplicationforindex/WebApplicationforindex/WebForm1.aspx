@@ -69,10 +69,9 @@
 
      Stream dataStream = freeDataResponse.GetResponseStream();
      StreamReader reader = new StreamReader(dataStream);
-     string testi = "testi";
      string responseFromServer = reader.ReadToEnd();
 
-     if (!responseFromServer.Contains(testi))
+     if (!responseFromServer.Contains(kaupunki))
      {
          Response.Write("Error, search parameters don't match");
      }
