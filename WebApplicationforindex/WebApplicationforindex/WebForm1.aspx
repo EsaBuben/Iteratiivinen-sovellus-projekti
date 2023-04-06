@@ -45,7 +45,7 @@
 
 
     string kaupunki = Request.Form["search1"];
-    string toimiala = Request.Form["seach2"];
+    string toimiala = Request.Form["search2"];
 
 
 
@@ -64,14 +64,26 @@
 <body>
 
  <% 
-        WebRequest freeDataRequest = WebRequest.Create(@"https://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=100&resultsFrom=0&registeredOffice=" + kaupunki + "&businessLine="+ toimiala +"&companyRegistrationFrom=2014-02-28&companyRegistrationTo=2023-01-31");
-        WebResponse freeDataResponse = freeDataRequest.GetResponse();
+     WebRequest freeDataRequest = WebRequest.Create(@"https://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=100&resultsFrom=0&registeredOffice=" + kaupunki + "&businessLine="+ toimiala +"&companyRegistrationFrom=2014-02-28&companyRegistrationTo=2023-01-31");
+     WebResponse freeDataResponse = freeDataRequest.GetResponse();
 
-        Stream dataStream = freeDataResponse.GetResponseStream();
-        StreamReader reader = new StreamReader(dataStream);
-        string responseFromServer = reader.ReadToEnd();
+     Stream dataStream = freeDataResponse.GetResponseStream();
+     StreamReader reader = new StreamReader(dataStream);
+     string testi = "testi";
+     string responseFromServer = reader.ReadToEnd();
 
-        //Response.Write(responseFromServer);
+     if (!responseFromServer.Contains(testi))
+     {
+         Response.Write("Error, search parameters don't match");
+     }
+     if (!responseFromServer.Contains(toimiala))
+            {
+         Response.Write("Error, search parameters don't match");
+     }
+     else
+     {
+        Response.Write(responseFromServer);
+     }
 
 
         %>
