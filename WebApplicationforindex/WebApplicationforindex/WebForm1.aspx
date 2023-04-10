@@ -71,7 +71,7 @@
      StreamReader reader = new StreamReader(dataStream);
      string responseFromServer = reader.ReadToEnd();
 
-     if (!responseFromServer.Contains(kaupunki))
+     /*if (!responseFromServer.Contains(kaupunki))
      {
          Response.Write("Error, search parameters don't match");
      }
@@ -83,7 +83,7 @@
      {
         Response.Write(responseFromServer);
      }
-
+     */
 
         %>
 
@@ -104,6 +104,61 @@
             <th>Number</th>
             <th>Email</th>
         </tr>
+        <%
+
+            int i = 0;
+            int ind = 0;
+            var charsToRemove = new string[] {"[", "]", "{", "}", "\""};
+            foreach (var c in charsToRemove)
+            {
+                responseFromServer = responseFromServer.Replace(c, string.Empty);
+            }
+            string[] lista = responseFromServer.Split(',');
+            string[] yNimi = new string[100];
+            string[] yTunnus =new string[100];
+            while (lista.Length > i)
+            {
+                if (!lista[i].Contains("businessId"))
+                {
+                    i++;
+                } else if (lista[i].Contains("businessId:"))
+                {
+                    yTunnus[ind] = lista[i].Remove(0, 11);
+                    ind++;
+                    i++;
+                }
+
+            }
+            yTunnus[0] = yTunnus[0].Remove(0, 8);
+            ind = 0;
+            i = 0;
+            while (lista.Length > i)
+            {
+                if (!lista[i].Contains("name"))
+                {
+                    i++;
+                } else if (lista[i].Contains("name:"))
+                {
+                    yNimi[ind] = lista[i].Remove(0,5);
+                    ind++;
+                    i++;
+                }
+
+            }
+
+            for (i = 0; yNimi.Length > i; i++)
+            {
+                Response.Write("<tr><td>" + yTunnus[i] + "</td>" + "<td>" + yNimi[i] + "</td></tr>");
+            }
+
+
+
+
+
+
+
+
+            %>
         <%
             /*if (kaupunki == "Helsinki" && toimiala == "Kuljetus")
             {
