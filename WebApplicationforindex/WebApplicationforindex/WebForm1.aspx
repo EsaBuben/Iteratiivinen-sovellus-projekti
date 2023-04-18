@@ -39,6 +39,7 @@
          try
 
          {
+             // Send a GET request to the specified URL using the search parameters from the form inputs
              WebRequest freeDataRequest = WebRequest.Create(@"https://avoindata.prh.fi/bis/v1?totalResults=false&maxResults=100&resultsFrom=0&registeredOffice=" + kaupunki + "&businessLine=" + toimiala + "&companyRegistrationFrom=2014-02-28&companyRegistrationTo=2023-01-31");
              WebResponse freeDataResponse = freeDataRequest.GetResponse();
              Stream dataStream = freeDataResponse.GetResponseStream();
@@ -53,6 +54,7 @@
              {
                  int i = 0;
                  int ind = 0;
+                 // Remove unnecessary characters from the response string
                  var charsToRemove = new string[] { "[", "]", "{", "}", "\"" };
                  foreach (var c in charsToRemove)
 
@@ -61,7 +63,7 @@
                      responseFromServer = responseFromServer.Replace(c, string.Empty);
 
                  }
-
+                  // Extract the business ID and name for each company from the response string and store them in arrays
                  string[] lista = responseFromServer.Split(',');
                  string[] yNimi = new string[100];
                  string[] yTunnus = new string[100];
@@ -158,20 +160,6 @@
          }
      }
 %>
-
-
-
-
-
-
- 
- 
-
-    </table>
-
-
-
-
+</table>
 </body>
-
 </html>
