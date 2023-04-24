@@ -63,7 +63,7 @@
                      responseFromServer = responseFromServer.Replace(c, string.Empty);
 
                  }
-                  // Extract the business ID and name for each company from the response string and store them in arrays
+                 // Extract the business ID and name for each company from the response string and store them in arrays
                  string[] lista = responseFromServer.Split(',');
                  string[] yNimi = new string[100];
                  string[] yTunnus = new string[100];
@@ -133,9 +133,11 @@
                  for (i = 0; yNimi.Length > i; i++)
 
                  {
-
+                     if (yNimi[i] == null)
+                     {
+                         break;
+                     } else 
                      Response.Write("<tr><td>" + yTunnus[i] + "</td>" + "<td>" + yNimi[i] + "</td></tr>");
-
                  }
 
              }
